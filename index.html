@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Block Breaker - the classic arcade game reimagined for your browser. Break blocks, collect power-ups, and challenge yourself with multiple levels of fun!">
+    <title>Block Breaker - Classic Arcade Game | Free Online Game</title>
+    <link rel="canonical" href="https://blockbreaker.click/">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Block Breaker - Classic Arcade Game">
+    <meta property="og:description" content="Play the classic Block Breaker game for free in your browser. No downloads required!">
+    <meta property="og:url" content="https://blockbreaker.click/">
+    <meta property="og:image" content="https://blockbreaker.click/images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Block Breaker",
+      "description": "A classic arcade game where you break blocks with a ball and paddle.",
+      "url": "https://blockbreaker.click/",
+      "genre": ["Arcade", "Puzzle"],
+      "gamePlatform": "Web Browser"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Block Breaker</h1>
+            <p class="tagline">The classic arcade game reimagined for your browser</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="game-section">
+            <div id="game-container">
+                <canvas id="gameCanvas"></canvas>
+                <div id="game-overlay">
+                    <div id="start-screen" class="overlay-screen">
+                        <h2>Ready to Play?</h2>
+                        <p>Break all the blocks to advance to the next level!</p>
+                        <button id="start-button" class="game-button">Start Game</button>
+                    </div>
+                    <div id="level-complete" class="overlay-screen hidden">
+                        <h2>Level Complete!</h2>
+                        <p>Score: <span id="level-score">0</span></p>
+                        <button id="next-level-button" class="game-button">Next Level</button>
+                    </div>
+                    <div id="game-over" class="overlay-screen hidden">
+                        <h2>Game Over</h2>
+                        <p>Final Score: <span id="final-score">0</span></p>
+                        <button id="restart-button" class="game-button">Play Again</button>
+                    </div>
+                    <div id="pause-screen" class="overlay-screen hidden">
+                        <h2>Game Paused</h2>
+                        <button id="resume-button" class="game-button">Resume</button>
+                    </div>
+                </div>
+                <div id="mobile-controls" class="hidden">
+                    <div id="left-control"></div>
+                    <div id="right-control"></div>
+                </div>
+            </div>
+            <div id="game-stats">
+                <div class="stat-box">
+                    <span>Level: </span><span id="level-display">1</span>
+                </div>
+                <div class="stat-box">
+                    <span>Score: </span><span id="score-display">0</span>
+                </div>
+                <div class="stat-box">
+                    <span>Lives: </span><span id="lives-display">3</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-play">
+            <h2>How to Play Block Breaker</h2>
+            <div class="content-columns">
+                <div class="column">
+                    <h3>Controls</h3>
+                    <ul>
+                        <li><strong>PC:</strong> Move your paddle with the mouse or left/right arrow keys</li>
+                        <li><strong>Mobile:</strong> Swipe left or right on the screen</li>
+                        <li>Press Space or tap to launch the ball</li>
+                        <li>Press P to pause the game</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Objective</h3>
+                    <p>Break all the blocks in each level to advance. Don't let the ball fall below your paddle!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="power-ups">
+            <h2>Power-Ups and Special Blocks</h2>
+            <div class="power-up-grid">
+                <div class="power-up-item">
+                    <div class="power-up-icon expand"></div>
+                    <h3>Paddle Expand</h3>
+                    <p>Makes your paddle wider for easier ball control</p>
+                </div>
+                <div class="power-up-item">
+                    <div class="power-up-icon multi-ball"></div>
+                    <h3>Multi-Ball</h3>
+                    <p>Splits your ball into three for maximum destruction</p>
+                </div>
+                <div class="power-up-item">
+                    <div class="power-up-icon slow"></div>
+                    <h3>Slow Motion</h3>
+                    <p>Slows down the ball for better control</p>
+                </div>
+                <div class="power-up-item">
+                    <div class="power-up-icon extra-life"></div>
+                    <h3>Extra Life</h3>
+                    <p>Gives you an additional chance</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips-tricks">
+            <h2>Tips and Tricks for Block Breaker Masters</h2>
+            <div class="content-columns">
+                <div class="column">
+                    <h3>Angle Control</h3>
+                    <p>Hit the ball with different parts of your paddle to control its direction. The edges will send the ball at sharper angles!</p>
+                </div>
+                <div class="column">
+                    <h3>Power-Up Strategy</h3>
+                    <p>Don't always rush to catch every power-up. Some might be more valuable depending on your current situation.</p>
+                </div>
+                <div class="column">
+                    <h3>Block Priority</h3>
+                    <p>Focus on clearing paths to the top of the screen first, then work on isolated blocks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-game">
+            <h2>About Block Breaker</h2>
+            <p>Block Breaker is inspired by classic arcade games like Breakout and Arkanoid. Our version brings this timeless concept to modern browsers with smooth gameplay, vibrant Apple-inspired visuals, and challenging levels that will test your reflexes and strategy.</p>
+            <p>Unlike many online games, Block Breaker runs directly in your browser with no downloads or plugins required. It's perfect for quick gaming sessions during breaks or longer challenges as you try to master all levels.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is Block Breaker free to play?</h3>
+                <p>Yes! Block Breaker is completely free with no hidden costs or in-app purchases.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I play Block Breaker on my mobile device?</h3>
+                <p>Absolutely! The game is fully optimized for both desktop and mobile play.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does Block Breaker work offline?</h3>
+                <p>Once the game has loaded in your browser, you can continue playing even if your internet connection drops.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How many levels are there?</h3>
+                <p>Currently, Block Breaker features 10 increasingly challenging levels, with more being added regularly!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BlockBreaker.click. All rights reserved.</p>
+            <p>A classic arcade game reimagined for modern browsers.</p>
+        </div>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
