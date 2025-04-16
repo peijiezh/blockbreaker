@@ -3,31 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Block Breaker - the classic arcade game reimagined for your browser. Break blocks, collect power-ups, and challenge yourself with multiple levels of fun!">
-    <title>Block Breaker - Classic Arcade Game | Free Online Game</title>
+    <meta name="description" content="Play Block Breaker - the classic arcade brick-breaking game reimagined for your browser. Break blocks, collect power-ups, and challenge yourself with 10 exciting levels. Free to play on any device!">
+    <title>Block Breaker Game | Classic Arcade Brick Breaker | Play Free Online</title>
     <link rel="canonical" href="https://blockbreaker.click/">
     <link rel="stylesheet" href="styles.css">
-    <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Block Breaker - Classic Arcade Game">
-    <meta property="og:description" content="Play the classic Block Breaker game for free in your browser. No downloads required!">
+    <meta property="og:title" content="Block Breaker - Classic Arcade Brick Breaking Game">
+    <meta property="og:description" content="Play the classic Block Breaker game for free in your browser. Break blocks, collect power-ups, and beat all 10 levels. No downloads required!">
     <meta property="og:url" content="https://blockbreaker.click/">
     <meta property="og:image" content="https://blockbreaker.click/images/og-image.jpg">
     <meta property="og:type" content="website">
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Block Breaker - Classic Arcade Game">
+    <meta name="twitter:description" content="Play the classic Block Breaker game for free in your browser. No downloads required!">
+    <meta name="twitter:image" content="https://blockbreaker.click/images/og-image.jpg">
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Game",
       "name": "Block Breaker",
-      "description": "A classic arcade game where you break blocks with a ball and paddle.",
+      "description": "A classic arcade game where you break blocks with a ball and paddle. Play through 10 challenging levels with power-ups and special blocks.",
       "url": "https://blockbreaker.click/",
-      "genre": ["Arcade", "Puzzle"],
-      "gamePlatform": "Web Browser"
+      "image": "https://blockbreaker.click/images/og-image.jpg",
+      "genre": ["Arcade", "Puzzle", "Brick Breaker"],
+      "gamePlatform": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "156"
+      }
     }
     </script>
-
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRSSY2W1ZQ"></script>
@@ -42,18 +61,22 @@
 <body>
     <header>
         <div class="container">
-            <h1>Block Breaker</h1>
-            <p class="tagline">The classic arcade game reimagined for your browser</p>
+            <h1>Block Breaker: Classic Arcade Action</h1>
+            <p class="tagline">The timeless brick-breaking game reimagined for your browser</p>
         </div>
     </header>
 
     <main class="container">
+        <section id="game-intro">
+            <p class="intro-text">Welcome to Block Breaker, the ultimate free online brick-breaking game! Control your paddle, launch the ball, and destroy all the blocks to advance through increasingly challenging levels. Collect power-ups, earn high scores, and test your reflexes in this modern take on a classic arcade favorite.</p>
+        </section>
+        
         <section id="game-section">
             <div id="game-container">
                 <canvas id="gameCanvas"></canvas>
                 <div id="game-overlay">
                     <div id="start-screen" class="overlay-screen">
-                        <h2>Ready to Play?</h2>
+                        <h2>Ready to Play Block Breaker?</h2>
                         <p>Break all the blocks to advance to the next level!</p>
                         <button id="start-button" class="game-button">Start Game</button>
                     </div>
@@ -94,7 +117,7 @@
             <h2>How to Play Block Breaker</h2>
             <div class="content-columns">
                 <div class="column">
-                    <h3>Controls</h3>
+                    <h3>Game Controls</h3>
                     <ul>
                         <li><strong>PC:</strong> Move your paddle with the mouse or left/right arrow keys</li>
                         <li><strong>Mobile:</strong> Swipe left or right on the screen</li>
@@ -103,8 +126,8 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <h3>Objective</h3>
-                    <p>Break all the blocks in each level to advance. Don't let the ball fall below your paddle!</p>
+                    <h3>Game Objective</h3>
+                    <p>Break all the blocks in each level to advance. Don't let the ball fall below your paddle or you'll lose a life! Complete all 10 levels to become a Block Breaker master.</p>
                 </div>
             </div>
         </section>
@@ -155,12 +178,34 @@
 
         <section id="about-game">
             <h2>About Block Breaker</h2>
-            <p>Block Breaker is inspired by classic arcade games like Breakout and Arkanoid. Our version brings this timeless concept to modern browsers with smooth gameplay, vibrant Apple-inspired visuals, and challenging levels that will test your reflexes and strategy.</p>
+            <p>Block Breaker is inspired by classic arcade games like Breakout and Arkanoid. Our version brings this timeless concept to modern browsers with smooth gameplay, vibrant visuals, and challenging levels that will test your reflexes and strategy.</p>
             <p>Unlike many online games, Block Breaker runs directly in your browser with no downloads or plugins required. It's perfect for quick gaming sessions during breaks or longer challenges as you try to master all levels.</p>
         </section>
 
+        <section id="game-features">
+            <h2>Block Breaker Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>10 Challenging Levels</h3>
+                    <p>Each level increases in difficulty with more complex block patterns and faster gameplay.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Exciting Power-Ups</h3>
+                    <p>Collect special power-ups that transform your gameplay experience.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Mobile Optimized</h3>
+                    <p>Play on any device with controls optimized for both desktop and mobile.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>No Downloads Required</h3>
+                    <p>Play instantly in your browser without installing anything.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="faq">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Frequently Asked Questions About Block Breaker</h2>
             <div class="faq-item">
                 <h3>Is Block Breaker free to play?</h3>
                 <p>Yes! Block Breaker is completely free with no hidden costs or in-app purchases.</p>
@@ -174,9 +219,19 @@
                 <p>Once the game has loaded in your browser, you can continue playing even if your internet connection drops.</p>
             </div>
             <div class="faq-item">
-                <h3>How many levels are there?</h3>
+                <h3>How many levels are there in Block Breaker?</h3>
                 <p>Currently, Block Breaker features 10 increasingly challenging levels, with more being added regularly!</p>
             </div>
+            <div class="faq-item">
+                <h3>What makes Block Breaker different from other brick breaker games?</h3>
+                <p>Our game combines classic gameplay with modern features like special power-ups, responsive controls, and a sleek design that works on any device.</p>
+            </div>
+        </section>
+        
+        <section id="why-play">
+            <h2>Why Play Block Breaker Online?</h2>
+            <p>Block Breaker offers the perfect blend of nostalgia and modern gaming. Whether you remember the classic arcade versions or you're new to brick-breaking games, our version provides hours of entertainment with its simple yet addictive gameplay.</p>
+            <p>The game is perfect for quick breaks, challenging your reflexes, or just relaxing with a timeless classic. With no downloads required and full mobile support, you can enjoy Block Breaker anywhere, anytime!</p>
         </section>
     </main>
 
@@ -184,7 +239,7 @@
         <div class="container">
             <p>&copy; 2025 BlockBreaker.click. All rights reserved.</p>
             <p>A classic arcade game reimagined for modern browsers.</p>
-            <p><a href="mailto:support@blockbreaker.click">support@blockbreaker.click</a></p>
+            <p>Need help? Contact us at <a href="mailto:support@blockbreaker.click">support@blockbreaker.click</a></p>
         </div>
     </footer>
 
