@@ -68,7 +68,7 @@
                 <div id="game-overlay">
                     <div id="start-screen" class="overlay-screen">
                         <h2>Ready to Play Block Breaker?</h2>
-                        <p>Break all the blocks to advance to the next level!</p>
+                        <p>Press Spacebar to Launch!</p>
                         <button id="start-button" class="game-button">Start Game</button>
                     </div>
                     <div id="level-complete" class="overlay-screen hidden">
@@ -106,17 +106,25 @@
 
         <div class="container">
             <h1>Block Breaker: Classic Arcade Action</h1>
-            <p class="tagline">The timeless brick-breaking game reimagined for your browser</p>
+            <p class="tagline">Welcome to Block Breaker, the ultimate free online brick-breaking game! Control your paddle, launch the ball, and destroy all the blocks to advance through increasingly challenging levels. Collect power-ups, earn high scores, and test your reflexes in this modern take on a classic arcade favorite.</p>
+            
+            <!-- Navigation Bar -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#how-to-play">How to Play</a></li>
+                    <li><a href="#power-ups">Power-Ups</a></li>
+                    <li><a href="#tips-tricks">Tips & Tricks</a></li>
+                    <li><a href="#game-features">Features</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#why-play">Why Play</a></li>
+                    <li><a href="#More-Games">More Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main class="container">
-
-
-
-        <section id="game-intro">
-            <p class="intro-text">Welcome to Block Breaker, the ultimate free online brick-breaking game! Control your paddle, launch the ball, and destroy all the blocks to advance through increasingly challenging levels. Collect power-ups, earn high scores, and test your reflexes in this modern take on a classic arcade favorite.</p>
-        </section>
 
         <section id="how-to-play">
             <h2>How to Play Block Breaker</h2>
@@ -181,12 +189,6 @@
             </div>
         </section>
 
-        <section id="about-game">
-            <h2>About Block Breaker</h2>
-            <p>Block Breaker is inspired by classic arcade games like Breakout and Arkanoid. Our version brings this timeless concept to modern browsers with smooth gameplay, vibrant visuals, and challenging levels that will test your reflexes and strategy.</p>
-            <p>Unlike many online games, Block Breaker runs directly in your browser with no downloads or plugins required. It's perfect for quick gaming sessions during breaks or longer challenges as you try to master all levels.</p>
-        </section>
-
         <section id="game-features">
             <h2>Block Breaker Game Features</h2>
             <div class="features-grid">
@@ -238,16 +240,103 @@
             <p>Block Breaker offers the perfect blend of nostalgia and modern gaming. Whether you remember the classic arcade versions or you're new to brick-breaking games, our version provides hours of entertainment with its simple yet addictive gameplay.</p>
             <p>The game is perfect for quick breaks, challenging your reflexes, or just relaxing with a timeless classic. With no downloads required and full mobile support, you can enjoy Block Breaker anywhere, anytime!</p>
         </section>
+
+        <section id="More-Games">
+            <h2>Want to Try Other Fun Games? Here are More Games Recommend!</h2>
+            <div class="faq-item">
+                <a href="https://www.love-tester.top/"</a><h3>lovet tester</h3></a>
+                <p>Hey, if a certain person just popped into your head, here's love calculator' game trying to guess how good a match you'd be with.</p>
+            </div>
+
+            <div class="faq-item">
+                <a href="https://likeablepersontest.xyz/"</a><h3>Likable person test</h3></a>
+                <p>Whether you're looking to improve your professional relationships, enhance your social skills, or simply understand yourself better, this test provides a personalized likability profile in just a few minutes.</p>
+            </div>
+
+            <div class="faq-item">
+                <a href="https://concentrationgame.xyz/"</a><h3>Concentration Game</h3></a>
+                <p>Fruit Flip, a perfect quick concentration game to sharpen your focus and give your brain a refreshing workout</p>
+            </div>
+
+            <div class="faq-item">
+                <a href="https://ragdollhits.click/"</a><h3>ragdoll hit</h3></a>
+                <p>An exciting physics-based fighting game where you control a ragdoll character battling against stickmen enemies.</p>
+            </div>
+
+            <div class="faq-item">
+                <a href="https://shadybears.online/"</a><h3>Shady Bears</h3></a>
+                <p>Discover the mysterious world of Shady Bears, where adventure lurks in every shadow.</p>
+            </div>
+            
+            <div class="faq-item">
+                <a href="https://unicorncolor.online/"</a><h3>Unicorn Coloring Pages</h3></a>
+                <p>Dive into a magical world of unicorns with collection of free printable coloring pages!</p>
+            </div>
+            
+        </section>
     </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 BlockBreaker.click. All rights reserved.</p>
             <p>A classic arcade game reimagined for modern browsers.</p>
-            <p>Need help? Contact us at <a href="mailto:support@blockbreaker.click">support@blockbreaker.click</a></p>
+            <p><a href="mailto:support@blockbreaker.click">support@blockbreaker.click</a></p>
         </div>
     </footer>
 
     <script src="game.js"></script>
+
+    <script>
+        // Add this to your existing script or create a new script tag
+        document.querySelectorAll('.main-nav a').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              // Scroll smoothly to the target element
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              
+              // Update URL hash without causing a jump
+              history.pushState(null, null, targetId);
+            }
+          });
+        });
+      </script>
+
+    <script>
+        // Prevent spacebar and down arrow from scrolling the page
+        document.addEventListener('keydown', function(e) {
+            // Check if the pressed key is the spacebar (key code 32 or ' ') OR the down arrow (key code 40 or 'ArrowDown')
+            if (e.keyCode === 32 || e.key === ' ' || e.keyCode === 40 || e.key === 'ArrowDown') {
+                // Only prevent default if the target is not an input, textarea, or other element that needs these keys
+                const target = e.target;
+                const tagName = target.tagName.toLowerCase();
+    
+                if (tagName !== 'input' && tagName !== 'textarea' && tagName !== 'select' &&
+                    !target.isContentEditable &&
+                    !(target.classList && target.classList.contains('game-button'))) {
+                    // Prevent the default action (page scroll) for spacebar and down arrow
+                    e.preventDefault();
+    
+                    // If the game is in playing state and spacebar is pressed, launch the ball
+                    if (gameState === 'playing' && (e.keyCode === 32 || e.key === ' ')) {
+                        balls.forEach(ball => ball.launch());
+                    }
+    
+                    // You can add specific actions for the down arrow key here if needed
+                    // For example, if you want to implement some other game control with the down arrow
+                    // if (gameState === 'playing' && (e.keyCode === 40 || e.key === 'ArrowDown')) {
+                    //     // Your down arrow action here
+                    // }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
