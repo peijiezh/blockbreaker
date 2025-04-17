@@ -57,9 +57,9 @@ const COLORS = {
 // Game dimensions and settings
 const PADDLE_WIDTH = 100;
 const PADDLE_HEIGHT = 20;
-const PADDLE_SPEED = 8;
+const PADDLE_SPEED = 6;
 const BALL_RADIUS = 10;
-const BALL_SPEED = 5;
+const BALL_SPEED = 4;
 const BLOCK_WIDTH = 70;
 const BLOCK_HEIGHT = 30;
 const BLOCK_PADDING = 10;
